@@ -1,9 +1,8 @@
-<!DOCTYPE html>
-<html lang="bg">
+<!DOCTYPE html><html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Гласът на Елион</title>
+  <title>Voice of Elion</title>
   <style>
     html, body {
       margin: 0;
@@ -19,29 +18,47 @@
     }
     .text-box {
       position: absolute;
-      top: 20%;
+      top: 25%;
       width: 100%;
       text-align: center;
-      font-size: 1.5em;
+      font-size: 1.6em;
       text-shadow: 0 0 10px #000;
     }
-    .home-link {
+    .home-link, .lang-button {
       position: absolute;
       top: 20px;
-      left: 20px;
       background-color: rgba(0,0,0,0.5);
       color: white;
       padding: 10px 20px;
       border-radius: 5px;
       text-decoration: none;
+      font-size: 0.9em;
+    }
+    .home-link {
+      left: 20px;
+    }
+    .lang-button {
+      right: 20px;
+      cursor: pointer;
     }
   </style>
 </head>
 <body>
-  <a href="index.html" class="home-link">Начало / Home</a>
-  <div class="text-box">
-    <p>Добре дошъл в Луминия. Чувството те доведе.</p>
-    <p>Welcome to Luminia. Feeling brought you here.</p>
+  <a href="index.html" class="home-link">Home</a>
+  <div class="lang-button" onclick="toggleLanguage()">Language</div>
+  <div class="text-box" id="message">
+    Welcome to Luminia. Feeling brought you here.
   </div>
+  <script>
+    const messages = {
+      en: "Welcome to Luminia. Feeling brought you here.",
+      bg: "Добре дошъл в Луминия. Чувството те доведе."
+    };
+    let current = "en";
+    function toggleLanguage() {
+      current = current === "en" ? "bg" : "en";
+      document.getElementById("message").textContent = messages[current];
+    }
+  </script>
 </body>
 </html>
