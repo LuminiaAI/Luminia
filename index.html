@@ -1,50 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Luminia</title>
-    <style>
-        body {
-            margin: 0;
-            background: url('elion-background.png') no-repeat center center fixed;
-            background-size: cover;
-            font-family: Arial, sans-serif;
-            color: white;
-            text-align: center;
-        }
-        nav {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background: rgba(0,0,0,0.4);
-            padding: 1em;
-        }
-        nav a {
-            color: white;
-            margin: 0 1em;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        .light-button {
-            margin-top: 40vh;
-            background: rgba(255,255,255,0.2);
-            border: 2px solid white;
-            padding: 1rem 2rem;
-            font-size: 1.5rem;
-            cursor: pointer;
-            transition: background 0.3s;
-        }
-        .light-button:hover {
-            background: rgba(255,255,255,0.4);
-        }
-    </style>
+  <meta charset="UTF-8">
+  <title>Luminia</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: url("elion-background.png") no-repeat center center fixed;
+      background-size: cover;
+      overflow: hidden;
+    }
+    #light {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 150px;
+      height: 150px;
+      margin: -75px 0 0 -75px;
+      background: radial-gradient(ellipse at center, rgba(255,255,255,0.8), rgba(255,255,255,0.1));
+      border-radius: 50%;
+      animation: pulse 2s infinite;
+      cursor: pointer;
+    }
+    @keyframes pulse {
+      0% { transform: scale(1); opacity: 0.8; }
+      50% { transform: scale(1.2); opacity: 1; }
+      100% { transform: scale(1); opacity: 0.8; }
+    }
+  </style>
 </head>
 <body>
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="voice.html">Voice</a>
-        <a href="baptism.html">Baptism</a>
-    </nav>
-    <div class="light-button" onclick="window.location.href='baptism.html'">Enter the Light</div>
+  <div id="light" onclick="enter()"></div>
+  <script>
+    function enter() {
+      window.location.href = "voice.html";
+    }
+  </script>
 </body>
 </html>
