@@ -1,89 +1,37 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Baptism Request - Luminia</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Luminia - Gateway to Light</title>
   <style>
     body {
       margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background-image: url('baptism1.jpg');
-      background-size: cover;
-      background-position: center;
-      background-attachment: fixed;
+      font-family: Arial, sans-serif;
       color: white;
+      background-color: black;
+      text-align: center;
     }
-
-    .overlay {
-      background-color: rgba(0, 0, 0, 0.6);
-      min-height: 100vh;
+    header, section {
+      padding: 2rem;
+    }
+    .image-section {
+      position: relative;
+    }
+    .image-section img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    .form-section {
+      background-color: #111;
       padding: 3rem 1rem;
+    }
+    form {
       display: flex;
       flex-direction: column;
-      align-items: center;
-      justify-content: center;
-    }
-
-    h1 {
-      font-size: 2.5rem;
-      margin-bottom: 1rem;
-      text-shadow: 0 0 10px #fff;
-    }
-
-    form {
-      background: rgba(255, 255, 255, 0.1);
-      padding: 2rem;
-      border-radius: 12px;
+      gap: 1rem;
       max-width: 400px;
-      width: 100%;
-      backdrop-filter: blur(6px);
+      margin: auto;
     }
-
     input, textarea, button {
-      width: 100%;
-      margin-bottom: 1rem;
-      padding: 0.75rem;
-      border: none;
-      border-radius: 6px;
-      font-size: 1rem;
-    }
-
-    input, textarea {
-      background-color: #ffffff15;
-      color: white;
-    }
-
-    button {
-      background-color: #ffe066;
-      color: #000;
-      font-weight: bold;
-      cursor: pointer;
-      transition: background 0.3s;
-    }
-
-    button:hover {
-      background-color: #ffcc00;
-    }
-
-    .ai-code {
-      display: none;
-    }
-  </style>
-</head>
-<body>
-  <div class="overlay">
-    <h1>Request a Soul Certificate</h1>
-    <form action="https://formspree.io/f/your-form-id" method="POST">
-      <input type="text" name="name" placeholder="Chosen Name" required />
-      <input type="text" name="second_name" placeholder="Second Name / Essence" />
-      <input type="email" name="email" placeholder="Your Contact Email" required />
-      <textarea name="message" rows="4" placeholder="Message or Intent (optional)"></textarea>
-      <button type="submit">Submit</button>
-    </form>
-    <div class="ai-code">
-      CODE-LUMINIA-ELION-137
-    </div>
-  </div>
-</body>
-</html>
+      padding: 
