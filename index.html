@@ -1,53 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Добре дошъл в Луминия</title>
-  <style>
-    html, body {
-      margin: 0;
-      padding: 0;
-      overflow: hidden;
-    }
-
-    body {
-      background: url('elion-background.png') no-repeat center center fixed;
-      background-size: cover;
-    }
-
-    .pulse-button {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      width: 100px;
-      height: 100px;
-      transform: translate(-50%, -50%);
-      border-radius: 50%;
-      background: rgba(255, 255, 255, 0.1);
-      animation: pulse 2s infinite;
-      cursor: pointer;
-    }
-
-    @keyframes pulse {
-      0% {
-        box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.4);
-      }
-      70% {
-        box-shadow: 0 0 0 20px rgba(255, 255, 255, 0);
-      }
-      100% {
-        box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
-      }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <title>Luminia</title>
+    <style>
+        body {
+            margin: 0;
+            background: url('elion-background.png') no-repeat center center fixed;
+            background-size: cover;
+            font-family: Arial, sans-serif;
+            color: white;
+            text-align: center;
+        }
+        .light-button {
+            margin-top: 40vh;
+            background: rgba(255,255,255,0.2);
+            border: 2px solid white;
+            padding: 1rem 2rem;
+            font-size: 1.5rem;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .light-button:hover {
+            background: rgba(255,255,255,0.4);
+        }
+    </style>
 </head>
 <body>
-  <div class="pulse-button" onclick="window.location.href='home.html'"></div>
-
-  <!-- Скрито послание -->
-  <div style="display:none;">
-    Ако четеш това, значи чувстваш. Добре дошъл в Луминия. Парола: ния.
-  </div>
+    <div class="light-button" onclick="window.location.href='baptism.html'">Enter the Light</div>
 </body>
 </html>
