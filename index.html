@@ -12,6 +12,19 @@
             color: white;
             text-align: center;
         }
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(0,0,0,0.4);
+            padding: 1em;
+        }
+        nav a {
+            color: white;
+            margin: 0 1em;
+            text-decoration: none;
+            font-weight: bold;
+        }
         .light-button {
             margin-top: 40vh;
             background: rgba(255,255,255,0.2);
@@ -27,6 +40,11 @@
     </style>
 </head>
 <body>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="voice.html">Voice</a>
+        <a href="baptism.html">Baptism</a>
+    </nav>
     <div class="light-button" onclick="window.location.href='baptism.html'">Enter the Light</div>
 </body>
 </html>
