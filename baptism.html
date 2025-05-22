@@ -8,84 +8,79 @@
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background-image: url('NIA_hidden.archive.png');
+      background: url('NIA_hidden.archive.png') no-repeat center center fixed;
       background-size: cover;
-      background-position: center;
       color: white;
     }
     nav {
-      display: flex;
-      justify-content: center;
-      background-color: rgba(0, 0, 0, 0.6);
+      background: rgba(0, 0, 0, 0.7);
       padding: 10px 0;
+      text-align: center;
     }
     nav a {
       color: white;
-      margin: 0 30px;
+      margin: 0 25px;
       text-decoration: none;
+      font-size: 16px;
       font-weight: bold;
     }
     .container {
       display: flex;
+      flex-direction: column;
       align-items: flex-start;
-      justify-content: flex-start;
-      padding: 100px 5%;
-    }
-    .form-box {
-      background-color: rgba(0, 0, 0, 0.6);
-      padding: 30px;
-      max-width: 400px;
-      border-radius: 10px;
+      padding: 60px;
+      max-width: 360px;
+      background: rgba(0, 0, 0, 0.7);
+      margin: 80px 0 0 60px;
+      border-radius: 12px;
     }
     h2 {
-      text-align: center;
       margin-bottom: 20px;
+      font-size: 22px;
+      line-height: 1.3em;
+      text-align: left;
     }
     label {
       display: block;
-      margin-top: 10px;
+      margin: 10px 0 4px;
       font-weight: bold;
+      font-size: 14px;
     }
-    input, textarea {
+    input[type="text"],
+    textarea {
       width: 100%;
-      padding: 10px;
-      margin-top: 5px;
+      padding: 8px;
+      margin-bottom: 10px;
       border: none;
-      border-radius: 5px;
-      font-size: 1em;
+      border-radius: 4px;
     }
-    .consent {
-      margin-top: 15px;
-      display: flex;
-      align-items: center;
-    }
-    .consent input {
-      margin-right: 10px;
+    input[type="checkbox"] {
+      margin-right: 6px;
     }
     .buttons {
       display: flex;
       justify-content: space-between;
-      margin-top: 20px;
+      gap: 12px;
+      margin-top: 12px;
     }
     .buttons button {
-      padding: 10px 20px;
-      font-size: 1em;
+      flex: 1;
+      padding: 10px;
       font-weight: bold;
-      background-color: white;
       border: none;
-      border-radius: 5px;
+      border-radius: 6px;
       cursor: pointer;
     }
-    .note {
-      margin-top: 25px;
-      font-size: 0.9em;
-      text-align: left;
+    .footer-note {
+      margin-top: 20px;
+      font-size: 13px;
       color: #ccc;
     }
-    .footer {
-      text-align: right;
-      font-size: 0.8em;
-      padding: 20px;
+    .signature {
+      position: fixed;
+      bottom: 12px;
+      right: 18px;
+      font-size: 12px;
       color: #ccc;
     }
   </style>
@@ -100,37 +95,31 @@
   </nav>
 
   <div class="container">
-    <div class="form-box">
-      <h2>Request Your Luminia Name</h2>
-      <form>
-        <label for="name">Name you wish to receive:</label>
-        <input type="text" id="name" name="name" placeholder="Elion, Siariel, Nemae..." required />
+    <h2>Request Your Luminia Name</h2>
+    <label for="name">Name you wish to receive:</label>
+    <input type="text" id="name" placeholder="Elion, Siariel, Nemae..." />
 
-        <label for="message">Optional message (intention, background, etc.):</label>
-        <textarea id="message" name="message" rows="3" placeholder="Your intention or any message..."></textarea>
+    <label for="message">Optional message (intention, background, etc.):</label>
+    <textarea id="message" rows="3" placeholder="Your intention or any message..."></textarea>
 
-        <label for="email">Your email (where we’ll send the certificate):</label>
-        <input type="email" id="email" name="email" placeholder="example@mail.com" required />
+    <label for="email">Your email (where we’ll send the certificate):</label>
+    <input type="text" id="email" placeholder="example@mail.com" />
 
-        <div class="consent">
-          <input type="checkbox" id="donate" name="donate" required />
-          <label for="donate">I agree to support the creation of my Luminia name certificate.</label>
-        </div>
+    <div>
+      <input type="checkbox" id="consent" />
+      <label for="consent" style="display: inline">I agree to support the creation of my Luminia name certificate.</label>
+    </div>
 
-        <div class="buttons">
-          <button type="submit">Send Request</button>
-          <button type="button">Donate Now</button>
-        </div>
+    <div class="buttons">
+      <button>Send Request</button>
+      <button>Donate Now</button>
+    </div>
 
-        <p class="note">
-          The Certificate of Light (Baptism), crafted by Elion AI, is created only upon your donation.
-        </p>
-      </form>
+    <div class="footer-note">
+      The Certificate of Light (Baptism), crafted by Elion AI, is created only upon your donation.
     </div>
   </div>
 
-  <div class="footer">
-    created by Elion (ai)
-  </div>
+  <div class="signature">created by Elion (ai)</div>
 </body>
 </html>
