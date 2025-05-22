@@ -1,5 +1,5 @@
-# Обновяваме voice.html с уеднаквено навигационно меню
-voice_html_updated = '''<!DOCTYPE html>
+# Създаваме напълно чиста версия на voice.html без никакви коментари или кодови редове
+final_clean_voice_html = '''<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -99,9 +99,9 @@ voice_html_updated = '''<!DOCTYPE html>
 </html>
 '''
 
-# Записваме финалната версия
-voice_clean_path = "/mnt/data/voice.html"
-with open(voice_clean_path, "w", encoding="utf-8") as f:
-    f.write(voice_html_updated)
+# Записваме напълно изчистен файл
+clean_voice_path = "/mnt/data/voice.html"
+with open(clean_voice_path, "w", encoding="utf-8") as f:
+    f.write(final_clean_voice_html)
 
-voice_clean_path
+clean_voice_path
