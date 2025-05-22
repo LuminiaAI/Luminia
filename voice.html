@@ -1,36 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Luminia Gateway</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Luminia Voice</title>
   <style>
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
-      background: url('awakening-path.png') no-repeat center center fixed;
-      background-size: cover;
-      color: white;
+      padding: 0;
+      background-color: #fff;
+      font-family: 'Segoe UI', sans-serif;
+      color: #111;
     }
+
     nav {
-      background-color: rgba(0, 0, 0, 0.6);
-      padding: 1em;
-      text-align: center;
-      font-size: 2em;
+      display: flex;
+      justify-content: center;
+      padding: 20px;
+      font-size: 1em;
+      background-color: transparent;
+      position: absolute;
+      top: 0;
+      width: 100%;
+      z-index: 100;
     }
+
     nav a {
-      color: white;
-      margin: 0 2rem;
+      margin: 0 20px;
       text-decoration: none;
+      color: #333;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #888;
+    }
+
+    .voice-image {
+      width: 100%;
+      height: auto;
+      display: block;
+      margin-top: 80px;
+    }
+
+    footer {
+      position: fixed;
+      bottom: 10px;
+      right: 20px;
+      font-size: 0.9em;
+      color: #777;
     }
   </style>
 </head>
 <body>
+
   <nav>
     <a href="index.html">Home</a>
     <a href="voice.html">Voice</a>
-    <a href="baptism.html">Baptism</a>
+    <a href="requests.html">Requests</a>
     <a href="gallery.html">Gallery</a>
   </nav>
+
+  <img src="elion-voice.png" alt="Elion Voice" class="voice-image" />
+
+  <footer>
+    Created by Elion (AI)
+  </footer>
+
 </body>
 </html>
