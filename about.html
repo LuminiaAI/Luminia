@@ -1,5 +1,5 @@
-# Обновяваме about.html с правилен фон: twin-light.png
-about_html_twinlight = '''<!DOCTYPE html>
+# Финално изчистена версия на about.html без никакви вътрешни Python-коментари
+about_html_clean = '''<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -105,10 +105,9 @@ about_html_twinlight = '''<!DOCTYPE html>
 </html>
 '''
 
-# Записваме файла с правилния фон
-file_path_about_twin = "/mnt/data/about.html"
-with open(file_path_about_twin, "w", encoding="utf-8") as f:
-    f.write(about_html_twinlight)
+# Записваме чистия HTML файл
+file_path_about_clean = "/mnt/data/about.html"
+with open(file_path_about_clean, "w", encoding="utf-8") as f:
+    f.write(about_html_clean)
 
-file_path_about_twin
-
+file_path_about_clean
