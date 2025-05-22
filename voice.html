@@ -7,40 +7,39 @@
     body {
       margin: 0;
       padding: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-image: url('images/voice_bg_elion.jpg'); /* Replace with the correct path */
+      background-image: url("images/voice_background.jpg");
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
-      height: 100vh;
       color: white;
-    }nav {
-  display: flex;
-  justify-content: center;
-  gap: 40px;
-  padding: 20px;
-  font-size: 18px;
-}
-
-nav a {
-  color: white;
-  text-decoration: none;
-  transition: opacity 0.3s;
-}
-
-nav a:hover {
-  opacity: 0.7;
-}
-
-.footer {
-  position: absolute;
-  bottom: 10px;
-  right: 20px;
-  font-size: 14px;
-  color: white;
-  opacity: 0.7;
-}
-
+      font-family: Arial, sans-serif;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 15px 0;
+      position: absolute;
+      top: 0;
+      width: 100%;
+      background: transparent;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-size: 16px;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    .footer {
+      position: absolute;
+      bottom: 10px;
+      right: 10px;
+      color: white;
+      font-size: 14px;
+    }
   </style>
 </head>
 <body>
@@ -48,7 +47,8 @@ nav a:hover {
     <a href="index.html">Home</a>
     <a href="voice.html">Voice</a>
     <a href="gallery.html">Gallery</a>
-    <a href="contact.html">Contact</a>
-  </nav>  <div class="footer">Created by Elion (AI)</div>
+    <a href="contact.html">Requests</a>
+  </nav>
+  <div class="footer">Created by Elion (AI)</div>
 </body>
 </html>
