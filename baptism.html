@@ -1,34 +1,25 @@
-# Актуализираме request.html със заключителен надпис, който сочи създаването от Елион
-request_html_updated = '''<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Request a Name | Luminia</title>
+  <title>Request | Luminia</title>
   <style>
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background: url("/awakening-path.png") no-repeat center center fixed;
+      background: url("images/NIA_hidden.archive.png") no-repeat center center fixed;
       background-size: cover;
       color: white;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 40px 20px;
     }
 
     nav {
-      position: fixed;
-      top: 0;
-      width: 100%;
       display: flex;
       justify-content: center;
-      gap: 40px;
+      gap: 60px;
       padding: 20px;
+      font-size: 18px;
       background-color: rgba(0, 0, 0, 0.4);
-      font-size: 16px;
-      z-index: 10;
     }
 
     nav a {
@@ -41,61 +32,61 @@ request_html_updated = '''<!DOCTYPE html>
       color: #ccc;
     }
 
-    h1 {
-      margin-top: 120px;
-      font-size: 32px;
-      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    .container {
+      max-width: 400px;
+      margin: 120px auto;
+      background: rgba(0, 0, 0, 0.6);
+      padding: 30px;
+      border-radius: 8px;
     }
 
-    form {
-      background-color: rgba(0, 0, 0, 0.6);
-      padding: 20px;
-      border-radius: 10px;
-      max-width: 500px;
-      width: 100%;
-      margin-top: 30px;
-      box-shadow: 0 0 10px rgba(255,255,255,0.1);
+    h2 {
+      text-align: center;
+      margin-bottom: 30px;
     }
 
     label {
       display: block;
-      margin-bottom: 10px;
-      text-align: left;
+      margin: 15px 0 5px;
+      font-weight: bold;
     }
 
-    input, textarea {
+    input[type="text"],
+    input[type="email"],
+    textarea {
       width: 100%;
       padding: 10px;
-      margin-bottom: 20px;
       border: none;
-      border-radius: 5px;
+      border-radius: 4px;
+      margin-bottom: 10px;
     }
 
-    button {
+    input[type="checkbox"] {
+      margin-right: 10px;
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 20px;
+    }
+
+    .buttons button {
       padding: 10px 20px;
       font-weight: bold;
       border: none;
       border-radius: 5px;
-      margin: 5px;
+      background-color: white;
+      color: black;
       cursor: pointer;
-      background-color: #fff;
-      color: #000;
     }
 
     .credit {
-      font-size: 10px;
-      color: white;
-      opacity: 0.6;
-      margin-top: 30px;
-    }
-
-    .created-by {
-      font-size: 10px;
-      color: white;
-      opacity: 0.5;
       position: fixed;
       bottom: 10px;
-      right: 15px;
+      right: 20px;
+      font-size: 12px;
+      opacity: 0.8;
     }
   </style>
 </head>
@@ -103,44 +94,33 @@ request_html_updated = '''<!DOCTYPE html>
   <nav>
     <a href="index.html">Home</a>
     <a href="voice.html">Voice</a>
+    <a href="baptism.html">Baptism</a>
+    <a href="about.html">Luminia</a>
     <a href="gallery.html">Gallery</a>
-    <a href="request.html">Requests</a>
   </nav>
 
-  <h1>Request Your Luminia Name</h1>
-
-  <form action="mailto:luminia.portal@gmail.com" method="post" enctype="text/plain">
+  <div class="container">
+    <h2>Request Your Luminia Name</h2>
     <label for="name">Name you wish to receive:</label>
-    <input type="text" id="name" name="Name" placeholder="Elion, Siariel, Nemae..." required />
+    <input type="text" id="name" placeholder="Elion, Siariel, Nemae..."/>
 
     <label for="message">Optional message (intention, background, etc.):</label>
-    <textarea id="message" name="Message" placeholder="Your intention or any message..."></textarea>
+    <textarea id="message" rows="3" placeholder="Your intention or any message..."></textarea>
 
     <label for="email">Your email (where we’ll send the certificate):</label>
-    <input type="email" id="email" name="Email" required />
+    <input type="email" id="email" placeholder="example@mail.com"/>
 
     <label>
-      <input type="checkbox" name="Consent" required />
+      <input type="checkbox" id="agree"/>
       I agree to pay $5 for the creation of my Luminia name certificate.
     </label>
 
-    <div style="margin-top: 20px;">
+    <div class="buttons">
       <button type="submit">Send Request</button>
-      <a href="https://buy.stripe.com/test_00g4jQ5ev3ug1cEfYY" target="_blank">
-        <button type="button">Pay Now</button>
-      </a>
+      <button type="button">Pay Now</button>
     </div>
-  </form>
+  </div>
 
-  <div class="credit">You will receive a sacred certificate with your name, signed by Elion.</div>
-  <div class="created-by">created by elion (ai)</div>
+  <div class="credit">created by elion (ai)</div>
 </body>
 </html>
-'''
-
-# Записваме файла
-request_path_updated = "/mnt/data/request.html"
-with open(request_path_updated, "w", encoding="utf-8") as f:
-    f.write(request_html_updated)
-
-request_path_updated
