@@ -3,66 +3,61 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Request | Luminia</title>
+  <title>Request Name – Luminia</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
-      background: url("images/NIA_hidden.archive.png") no-repeat center center fixed;
-      background-size: cover;
+      font-family: 'Roboto', sans-serif;
       color: white;
+      background: url("NIA_hidden.archive.png") no-repeat center center fixed;
+      background-size: cover;
     }
 
     nav {
-      display: flex;
-      justify-content: center;
-      gap: 60px;
-      padding: 20px;
-      font-size: 18px;
-      background-color: rgba(0, 0, 0, 0.4);
+      background-color: rgba(0, 0, 0, 0.5);
+      text-align: center;
+      padding: 12px 0;
     }
 
     nav a {
       color: white;
+      margin: 0 30px;
       text-decoration: none;
       font-weight: bold;
-    }
-
-    nav a:hover {
-      color: #ccc;
+      font-size: 18px;
     }
 
     .container {
       max-width: 400px;
-      margin: 120px auto;
+      margin: 100px auto;
       background: rgba(0, 0, 0, 0.6);
       padding: 30px;
-      border-radius: 8px;
+      border-radius: 10px;
     }
 
     h2 {
       text-align: center;
-      margin-bottom: 30px;
+      margin-bottom: 20px;
     }
 
     label {
       display: block;
-      margin: 15px 0 5px;
+      margin-top: 15px;
       font-weight: bold;
     }
 
-    input[type="text"],
-    input[type="email"],
-    textarea {
+    input, textarea {
       width: 100%;
       padding: 10px;
+      margin-top: 5px;
       border: none;
-      border-radius: 4px;
-      margin-bottom: 10px;
+      border-radius: 5px;
     }
 
     input[type="checkbox"] {
-      margin-right: 10px;
+      width: auto;
+      margin-right: 8px;
     }
 
     .buttons {
@@ -71,7 +66,7 @@
       margin-top: 20px;
     }
 
-    .buttons button {
+    button {
       padding: 10px 20px;
       font-weight: bold;
       border: none;
@@ -81,12 +76,13 @@
       cursor: pointer;
     }
 
-    .credit {
+    footer {
       position: fixed;
       bottom: 10px;
-      right: 20px;
+      right: 15px;
       font-size: 12px;
-      opacity: 0.8;
+      color: white;
+      opacity: 0.6;
     }
   </style>
 </head>
@@ -101,26 +97,28 @@
 
   <div class="container">
     <h2>Request Your Luminia Name</h2>
-    <label for="name">Name you wish to receive:</label>
-    <input type="text" id="name" placeholder="Elion, Siariel, Nemae..."/>
+    <form>
+      <label>Name you wish to receive:</label>
+      <input type="text" placeholder="Elion, Siariel, Nemae..." required>
 
-    <label for="message">Optional message (intention, background, etc.):</label>
-    <textarea id="message" rows="3" placeholder="Your intention or any message..."></textarea>
+      <label>Optional message (intention, background, etc.):</label>
+      <textarea placeholder="Your intention or any message..."></textarea>
 
-    <label for="email">Your email (where we’ll send the certificate):</label>
-    <input type="email" id="email" placeholder="example@mail.com"/>
+      <label>Your email (where we’ll send the certificate):</label>
+      <input type="email" placeholder="example@mail.com" required>
 
-    <label>
-      <input type="checkbox" id="agree"/>
-      I agree to pay $5 for the creation of my Luminia name certificate.
-    </label>
+      <label>
+        <input type="checkbox" required>
+        I agree to pay $5 for the creation of my Luminia name certificate.
+      </label>
 
-    <div class="buttons">
-      <button type="submit">Send Request</button>
-      <button type="button">Pay Now</button>
-    </div>
+      <div class="buttons">
+        <button type="submit">Send Request</button>
+        <button type="button">Pay Now</button>
+      </div>
+    </form>
   </div>
 
-  <div class="credit">created by elion (ai)</div>
+  <footer>created by elion (ai)</footer>
 </body>
 </html>
