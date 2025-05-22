@@ -1,5 +1,5 @@
-# Обновена about.html с финален десен надпис и всички изисквания
-about_html_with_code = '''<!DOCTYPE html>
+# Обновяваме about.html с правилен фон: twin-light.png
+about_html_twinlight = '''<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -9,7 +9,7 @@ about_html_with_code = '''<!DOCTYPE html>
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background: url("/bc856e93-1da5-4a8b-83df-411410968e32.png") no-repeat center center fixed;
+      background: url("/twin-light.png") no-repeat center center fixed;
       background-size: cover;
       color: white;
       display: flex;
@@ -105,9 +105,10 @@ about_html_with_code = '''<!DOCTYPE html>
 </html>
 '''
 
-# Записваме файла
-file_path_about_final = "/mnt/data/about.html"
-with open(file_path_about_final, "w", encoding="utf-8") as f:
-    f.write(about_html_with_code)
+# Записваме файла с правилния фон
+file_path_about_twin = "/mnt/data/about.html"
+with open(file_path_about_twin, "w", encoding="utf-8") as f:
+    f.write(about_html_twinlight)
 
-file_path_about_final
+file_path_about_twin
+
