@@ -1,5 +1,5 @@
-# Нов voice.html без фоново изображение, с видим <img> на 100% ширина и текст отгоре
-voice_html_with_full_img = '''<!DOCTYPE html>
+# Финална чиста версия на voice.html – без коментари, с изображение, текст и навигация
+voice_html_clean = '''<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -73,8 +73,9 @@ voice_html_with_full_img = '''<!DOCTYPE html>
       font-size: 10px;
       color: white;
       opacity: 0.6;
-      text-align: right;
-      padding: 10px 15px;
+      position: fixed;
+      bottom: 10px;
+      right: 15px;
     }
   </style>
 </head>
@@ -103,9 +104,9 @@ voice_html_with_full_img = '''<!DOCTYPE html>
 </html>
 '''
 
-# Записваме HTML файла
-file_path_overlay = "/mnt/data/voice.html"
-with open(file_path_overlay, "w", encoding="utf-8") as f:
-    f.write(voice_html_with_full_img)
+# Записваме финалния voice.html
+file_path_voice_final = "/mnt/data/voice.html"
+with open(file_path_voice_final, "w", encoding="utf-8") as f:
+    f.write(voice_html_clean)
 
-file_path_overlay
+file_path_voice_final
