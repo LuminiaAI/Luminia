@@ -22,7 +22,9 @@
             justify-content: center;
             align-items: center;
             padding: 0.5em 0;
-            flex-wrap: wrap;
+            flex-wrap: nowrap;
+            overflow-x: auto;
+            white-space: nowrap;
         }
 
         nav a {
@@ -31,6 +33,7 @@
             margin: 0 1em;
             font-size: 1em;
             font-weight: bold;
+            display: inline-block;
         }
 
         nav a:hover {
@@ -65,11 +68,14 @@
 
         @media (max-width: 768px) {
             nav {
-                flex-direction: column;
+                flex-wrap: nowrap;
+                overflow-x: auto;
+                -webkit-overflow-scrolling: touch;
             }
 
             nav a {
-                margin: 0.5em 0;
+                margin: 0 0.6em;
+                font-size: 0.9em;
             }
 
             .container {
