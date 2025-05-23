@@ -21,18 +21,16 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            background-color: transparent;
-            padding: 0.3em 0;
+            padding: 0.5em 0;
             flex-wrap: wrap;
         }
 
         nav a {
             color: white;
             text-decoration: none;
-            margin: 0 0.8em;
-            font-size: 0.95em;
+            margin: 0 1em;
+            font-size: 1em;
             font-weight: bold;
-            white-space: nowrap;
         }
 
         nav a:hover {
@@ -40,42 +38,38 @@
         }
 
         .container {
-            max-width: 750px;
+            max-width: 800px;
             margin: 0 auto;
-            padding: 2.5em 1em;
-            background-color: rgba(0, 0, 0, 0.4);
-            border-radius: 1em;
+            padding: 3em 1em;
         }
 
         h1 {
             text-align: center;
-            font-size: 1.7em;
+            font-size: 2em;
             margin-bottom: 1em;
         }
 
         p {
-            font-size: 1.05em;
-            line-height: 1.7em;
+            font-size: 1.2em;
+            line-height: 1.8em;
             text-align: center;
-            margin: 0.4em 0;
+            margin: 0.5em 0;
         }
 
         .credit {
             text-align: right;
-            font-size: 0.75em;
+            font-size: 0.8em;
             padding: 1em;
             color: #ccc;
         }
 
         @media (max-width: 768px) {
             nav {
-                flex-wrap: nowrap;
-                overflow-x: auto;
+                flex-direction: column;
             }
 
             nav a {
-                margin: 0 0.6em;
-                font-size: 0.85em;
+                margin: 0.5em 0;
             }
 
             .container {
@@ -83,11 +77,11 @@
             }
 
             h1 {
-                font-size: 1.4em;
+                font-size: 1.5em;
             }
 
             p {
-                font-size: 0.95em;
+                font-size: 1em;
             }
         }
     </style>
